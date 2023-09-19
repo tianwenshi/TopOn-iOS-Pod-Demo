@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,16 @@
 		04CF323428000EDC0083B5AA /* ATNativeMessageStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF323028000EDB0083B5AA /* ATNativeMessageStreamViewController.m */; };
 		04CF323A28000F6D0083B5AA /* ATAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF323928000F6D0083B5AA /* ATAutoLayout.m */; };
 		04CF323F28000FB70083B5AA /* ATNativeRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF323B28000FB70083B5AA /* ATNativeRenderView.m */; };
+		2860116C2AB84AB200813B76 /* AnyThinkBanner.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286011662AB84AB200813B76 /* AnyThinkBanner.xcframework */; };
+		2860116E2AB84AB200813B76 /* AnyThinkInterstitial.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286011672AB84AB200813B76 /* AnyThinkInterstitial.xcframework */; };
+		286011702AB84AB200813B76 /* AnyThinkNative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286011682AB84AB200813B76 /* AnyThinkNative.xcframework */; };
+		286011722AB84AB200813B76 /* AnyThinkRewardedVideo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286011692AB84AB200813B76 /* AnyThinkRewardedVideo.xcframework */; };
+		286011742AB84AB200813B76 /* AnyThinkSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2860116A2AB84AB200813B76 /* AnyThinkSDK.xcframework */; };
+		286011762AB84AB200813B76 /* AnyThinkSplash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2860116B2AB84AB200813B76 /* AnyThinkSplash.xcframework */; };
+		2860117C2AB9388F00813B76 /* MATRewardedVideoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860117B2AB9388F00813B76 /* MATRewardedVideoAdapter.m */; };
+		286011832AB93A1900813B76 /* MaticooMediationNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860117F2AB93A1900813B76 /* MaticooMediationNetwork.m */; };
+		286011842AB93A1900813B76 /* MaticooMediationTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 286011802AB93A1900813B76 /* MaticooMediationTrackManager.m */; };
+		286011852AB93A1900813B76 /* MaticooMediationURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 286011812AB93A1900813B76 /* MaticooMediationURLSession.m */; };
 		56152C3F2902B59A00530FF6 /* ATTMCustomSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56152C382902B59A00530FF6 /* ATTMCustomSplashViewController.m */; };
 		9B1A9D6C288E82C800CC16FA /* ATNativeMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A9D6A288E82C800CC16FA /* ATNativeMainViewController.m */; };
 		9B1A9F5E288F882800CC16FA /* ATPasterVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A9F5D288F882800CC16FA /* ATPasterVideoViewController.m */; };
@@ -98,6 +108,20 @@
 		04CF323928000F6D0083B5AA /* ATAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAutoLayout.m; sourceTree = "<group>"; };
 		04CF323B28000FB70083B5AA /* ATNativeRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNativeRenderView.m; sourceTree = "<group>"; };
 		04CF323C28000FB70083B5AA /* ATNativeRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNativeRenderView.h; sourceTree = "<group>"; };
+		286011662AB84AB200813B76 /* AnyThinkBanner.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkBanner.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkBanner.xcframework; sourceTree = "<group>"; };
+		286011672AB84AB200813B76 /* AnyThinkInterstitial.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkInterstitial.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkInterstitial.xcframework; sourceTree = "<group>"; };
+		286011682AB84AB200813B76 /* AnyThinkNative.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkNative.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkNative.xcframework; sourceTree = "<group>"; };
+		286011692AB84AB200813B76 /* AnyThinkRewardedVideo.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkRewardedVideo.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkRewardedVideo.xcframework; sourceTree = "<group>"; };
+		2860116A2AB84AB200813B76 /* AnyThinkSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkSDK.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkSDK.xcframework; sourceTree = "<group>"; };
+		2860116B2AB84AB200813B76 /* AnyThinkSplash.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkSplash.xcframework; path = Pods/AnyThinkiOS/AnyThinkiOS/AnyThinkSplash.xcframework; sourceTree = "<group>"; };
+		2860117A2AB9388F00813B76 /* MATRewardedVideoAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MATRewardedVideoAdapter.h; sourceTree = "<group>"; };
+		2860117B2AB9388F00813B76 /* MATRewardedVideoAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MATRewardedVideoAdapter.m; sourceTree = "<group>"; };
+		2860117D2AB93A1900813B76 /* MaticooMediationURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationURLSession.h; sourceTree = "<group>"; };
+		2860117E2AB93A1900813B76 /* MaticooMediationTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationTrackManager.h; sourceTree = "<group>"; };
+		2860117F2AB93A1900813B76 /* MaticooMediationNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationNetwork.m; sourceTree = "<group>"; };
+		286011802AB93A1900813B76 /* MaticooMediationTrackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationTrackManager.m; sourceTree = "<group>"; };
+		286011812AB93A1900813B76 /* MaticooMediationURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaticooMediationURLSession.m; sourceTree = "<group>"; };
+		286011822AB93A1900813B76 /* MaticooMediationNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaticooMediationNetwork.h; sourceTree = "<group>"; };
 		44D83BDBBF3D3D426850A3E1 /* Pods-AnyThinkSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyThinkSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-AnyThinkSDKDemo/Pods-AnyThinkSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		56152C2E2902B59A00530FF6 /* ATTMBiddingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTMBiddingRequest.m; sourceTree = "<group>"; };
 		56152C2F2902B59A00530FF6 /* ATTMSplashCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTMSplashCustomEvent.m; sourceTree = "<group>"; };
@@ -193,13 +217,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC498DCF25EE362500955C17 /* libz.tbd in Frameworks */,
+				286011722AB84AB200813B76 /* AnyThinkRewardedVideo.xcframework in Frameworks */,
 				AC498DC925EE360D00955C17 /* SystemConfiguration.framework in Frameworks */,
+				286011742AB84AB200813B76 /* AnyThinkSDK.xcframework in Frameworks */,
+				2860116E2AB84AB200813B76 /* AnyThinkInterstitial.xcframework in Frameworks */,
 				AC498DC125EE35F700955C17 /* CoreTelephony.framework in Frameworks */,
 				AC498DBB25EE35E500955C17 /* CoreLocation.framework in Frameworks */,
 				AC498DC725EE360800955C17 /* StoreKit.framework in Frameworks */,
 				AC498DC525EE360300955C17 /* SafariServices.framework in Frameworks */,
 				AC498DCB25EE361200955C17 /* WebKit.framework in Frameworks */,
+				286011762AB84AB200813B76 /* AnyThinkSplash.xcframework in Frameworks */,
 				AC498DB925EE35DE00955C17 /* AdSupport.framework in Frameworks */,
+				286011702AB84AB200813B76 /* AnyThinkNative.xcframework in Frameworks */,
+				2860116C2AB84AB200813B76 /* AnyThinkBanner.xcframework in Frameworks */,
 				AC498DBD25EE35EB00955C17 /* CoreMedia.framework in Frameworks */,
 				AC498DCD25EE361D00955C17 /* libsqlite3.tbd in Frameworks */,
 				AC498DB725EE35D600955C17 /* AVFoundation.framework in Frameworks */,
@@ -253,6 +283,12 @@
 		1BE5C78DE8928691D97412C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				286011662AB84AB200813B76 /* AnyThinkBanner.xcframework */,
+				286011672AB84AB200813B76 /* AnyThinkInterstitial.xcframework */,
+				286011682AB84AB200813B76 /* AnyThinkNative.xcframework */,
+				286011692AB84AB200813B76 /* AnyThinkRewardedVideo.xcframework */,
+				2860116A2AB84AB200813B76 /* AnyThinkSDK.xcframework */,
+				2860116B2AB84AB200813B76 /* AnyThinkSplash.xcframework */,
 				AC498DCE25EE362200955C17 /* libz.tbd */,
 				AC498DCC25EE361800955C17 /* libsqlite3.tbd */,
 				AC498DCA25EE361200955C17 /* WebKit.framework */,
@@ -271,6 +307,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		286011792AB9384200813B76 /* zMaticoo */ = {
+			isa = PBXGroup;
+			children = (
+				2860117A2AB9388F00813B76 /* MATRewardedVideoAdapter.h */,
+				2860117B2AB9388F00813B76 /* MATRewardedVideoAdapter.m */,
+				286011822AB93A1900813B76 /* MaticooMediationNetwork.h */,
+				2860117F2AB93A1900813B76 /* MaticooMediationNetwork.m */,
+				2860117E2AB93A1900813B76 /* MaticooMediationTrackManager.h */,
+				286011802AB93A1900813B76 /* MaticooMediationTrackManager.m */,
+				2860117D2AB93A1900813B76 /* MaticooMediationURLSession.h */,
+				286011812AB93A1900813B76 /* MaticooMediationURLSession.m */,
+			);
+			name = zMaticoo;
+			sourceTree = "<group>";
+		};
 		2F88623D9B59A22EF880A819 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +334,7 @@
 		56152C2C2902B59A00530FF6 /* CustomAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				286011792AB9384200813B76 /* zMaticoo */,
 				56152C2D2902B59A00530FF6 /* CustomSplash */,
 				56152C382902B59A00530FF6 /* ATTMCustomSplashViewController.m */,
 				56152C392902B59A00530FF6 /* ATTMCustomSplashViewController.h */,
@@ -657,6 +709,7 @@
 				04CF321F280007900083B5AA /* ATHomeTableViewCell.m in Sources */,
 				04CF323428000EDC0083B5AA /* ATNativeMessageStreamViewController.m in Sources */,
 				56152C3F2902B59A00530FF6 /* ATTMCustomSplashViewController.m in Sources */,
+				286011832AB93A1900813B76 /* MaticooMediationNetwork.m in Sources */,
 				9BBD009F24863048009EAD66 /* ViewController.m in Sources */,
 				E01F86252848AC360011900C /* ATNativeSelfRenderView.m in Sources */,
 				9BF5E509289A14770085A76E /* ATBaiduTemplateRenderingAttribute.m in Sources */,
@@ -675,12 +728,15 @@
 				04CF323A28000F6D0083B5AA /* ATAutoLayout.m in Sources */,
 				9BF5E506289A13BB0085A76E /* TopOnAdManager.m in Sources */,
 				9B9FEC1B2890199200B905ED /* ATPasterSelfRenderView.m in Sources */,
+				286011842AB93A1900813B76 /* MaticooMediationTrackManager.m in Sources */,
 				9B1A9F6A288FCA4300CC16FA /* ATDrawListAdCell.m in Sources */,
 				E0F3B8AB286D973F007CF5AB /* ATDemoOfferAdMode.m in Sources */,
+				286011852AB93A1900813B76 /* MaticooMediationURLSession.m in Sources */,
 				04CF3220280007900083B5AA /* ATHomeFootView.m in Sources */,
 				9BBD009C24863048009EAD66 /* SceneDelegate.m in Sources */,
 				9BBD00BE248630C8009EAD66 /* ATBannerViewController.m in Sources */,
 				9B9FEC2128925F3200B905ED /* ATNativeExpressViewController.m in Sources */,
+				2860117C2AB9388F00813B76 /* MATRewardedVideoAdapter.m in Sources */,
 				04CF323F28000FB70083B5AA /* ATNativeRenderView.m in Sources */,
 				04CF3223280007900083B5AA /* ATSelectViewController.m in Sources */,
 				9B9FEC11288FE91A00B905ED /* ATDrawListOtherCell.m in Sources */,
@@ -833,11 +889,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85EEA80B39960C835625EC2F /* Pods-AnyThinkSDKDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YXYV74FF7;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -865,7 +920,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anythink.AnyThinkSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunce.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -876,11 +931,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44D83BDBBF3D3D426850A3E1 /* Pods-AnyThinkSDKDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6YXYV74FF7;
+				DEVELOPMENT_TEAM = 32Z4FX6L9H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -908,7 +962,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anythink.AnyThinkSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunce.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
