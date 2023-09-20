@@ -84,11 +84,14 @@
     if (self != nil) {
         //TODO: add some code for initialize Network SDK
         [[MaticooAds shareSDK] setMediationName:@"topon"];
-        [[MaticooAds shareSDK] initSDK:serverInfo[@"appid"] onSuccess:^() {
-            [MaticooMediationTrackManager trackMediationInitSuccess];
-        } onError:^(NSError* error) {
-            [MaticooMediationTrackManager trackMediationInitFailed:error];
-        }];
+        NSString *appkey = serverInfo[@"appkey"];
+        if (appkey){
+            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+                [MaticooMediationTrackManager trackMediationInitSuccess];
+            } onError:^(NSError* error) {
+                [MaticooMediationTrackManager trackMediationInitFailed:error];
+            }];
+        }
     }
     return self;
 }
@@ -102,7 +105,7 @@
     _customEvent =  [[MATRewardedVideoCustomEvent alloc] initWithInfo:serverInfo localInfo:localInfo];
     _customEvent.requestCompletionBlock = completion;
     
-    NSString *placementIdentifier = serverInfo[@"slot_id"];
+    NSString *placementIdentifier = serverInfo[@"placement_id"];
     if (placementIdentifier == nil){
         completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to load rewarded video.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
         return;
