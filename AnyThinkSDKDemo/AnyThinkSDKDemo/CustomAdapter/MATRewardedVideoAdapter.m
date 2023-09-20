@@ -3,12 +3,11 @@
 //  AnyThinkSDKDemo
 //
 //  Created by root on 2023/9/19.
-//  Copyright © 2023 抽筋的灯. All rights reserved.
+//  Copyright © 2023 root. All rights reserved.
 //
 
 #import "MATRewardedVideoAdapter.h"
 #import "MaticooMediationTrackManager.h"
-
 @import MaticooSDK;
 
 @interface MATRewardedVideoCustomEvent : ATRewardedVideoCustomEvent <MATRewardedVideoAdDelegate>
@@ -110,7 +109,6 @@
         completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to load rewarded video.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
         return;
     }
-    [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
     
     self.rewardedVideoAd = [[MATRewardedVideoAd alloc] initWithPlacementID: placementIdentifier];
     self.rewardedVideoAd.delegate = _customEvent;
@@ -122,6 +120,7 @@
     else
     {
         [self.rewardedVideoAd loadAd];
+        [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
     }
 }
 
