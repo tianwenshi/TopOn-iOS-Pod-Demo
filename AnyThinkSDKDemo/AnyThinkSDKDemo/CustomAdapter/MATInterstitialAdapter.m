@@ -70,7 +70,6 @@
 -(instancetype) initWithNetworkCustomInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo {
     self = [super init];
     if (self != nil) {
-    //TODO: add some code for initialize Network SDK
         //TODO: add some code for initialize Network SDK
         [[MaticooAds shareSDK] setMediationName:@"topon"];
         NSString *appkey = serverInfo[@"appkey"];
@@ -96,7 +95,7 @@
     
     NSString *placementIdentifier = serverInfo[@"placement_id"];
     if (placementIdentifier == nil){
-        completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to load rewarded video.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
+        completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to load interstitial.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
         return;
     }
 
