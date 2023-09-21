@@ -21,15 +21,15 @@
 -(instancetype) initWithNetworkCustomInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo {
     self = [super init];
     if (self != nil) {
-        [[MaticooAds shareSDK] setMediationName:@"topon"];
-        NSString *appkey = serverInfo[@"appkey"];
-        if (appkey){
-            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
-                [MaticooMediationTrackManager trackMediationInitSuccess];
-            } onError:^(NSError* error) {
-                [MaticooMediationTrackManager trackMediationInitFailed:error];
-            }];
-        }
+//        [[MaticooAds shareSDK] setMediationName:@"topon"];
+//        NSString *appkey = serverInfo[@"appkey"];
+//        if (appkey){
+//            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+//                [MaticooMediationTrackManager trackMediationInitSuccess];
+//            } onError:^(NSError* error) {
+//                [MaticooMediationTrackManager trackMediationInitFailed:error];
+//            }];
+//        }
     }
     return self;
 }
@@ -44,16 +44,29 @@
         return;
     }
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.nativeAd = [[NSClassFromString(@"MATNativeAd") alloc] initWithPlacementID:placementIdentifier];
-        self.nativeAd.delegate = self->_customEvent;
-        CGSize size = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 30.0f, 200.0f);
-        NSDictionary *extraInfo = localInfo;
-        NSString *sizeKey = [serverInfo[@"media_size"] integerValue] > 0 ? @{@2:kATExtraNativeImageSize228_150, @1:kATExtraNativeImageSize690_388}[serverInfo[@"media_size"]] : extraInfo[kATExtraNativeImageSizeKey];
-        NSInteger imgSize = [@{kATExtraNativeImageSize228_150:@9, kATExtraNativeImageSize690_388:@10}[sizeKey] integerValue];
-        [self.nativeAd setAdSize:size];
-        [self.nativeAd loadAd];
-    });
+    [[MaticooAds shareSDK] setMediationName:@"topon"];
+    NSString *appkey = serverInfo[@"appkey"];
+    if (appkey){
+        [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+            [MaticooMediationTrackManager trackMediationInitSuccess];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.nativeAd = [[NSClassFromString(@"MATNativeAd") alloc] initWithPlacementID:placementIdentifier];
+                self.nativeAd.delegate = self->_customEvent;
+                CGSize size = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 30.0f, 200.0f);
+//                NSDictionary *extraInfo = localInfo;
+//                CGSize size = [extraInfo[kExtraInfoNativeAdSizeKey] respondsToSelector:@selector(CGSizeValue)] ? [extraInfo[kATExtraInfoNativeAdSizeKeykATExtraInfoNativeAdSizeKey] CGSizeValue] : CGSizeMake(320.0f, 250.0f);
+//                NSString *sizeKey = [serverInfo[@"media_size"] integerValue] > 0 ? @{@2:kATExtraNativeImageSize228_150, @1:kATExtraNativeImageSize690_388}[serverInfo[@"media_size"]] : extraInfo[kATExtraNativeImageSizeKey];
+//                NSInteger imgSize = [@{kATExtraNativeImageSize228_150:@9, kATExtraNativeImageSize690_388:@10}[sizeKey] integerValue];
+                [self.nativeAd setAdSize:size];
+                [self.nativeAd loadAd];
+            });
+        } onError:^(NSError* error) {
+            [MaticooMediationTrackManager trackMediationInitFailed:error];
+            completion(nil,error);
+        }];
+    }
+    
+
     
 //    NSDictionary *extraInfo = localInfo;
 //    _customEvent.requestExtra = extraInfo;

@@ -71,15 +71,15 @@
     self = [super init];
     if (self != nil) {
         //TODO: add some code for initialize Network SDK
-        [[MaticooAds shareSDK] setMediationName:@"topon"];
-        NSString *appkey = serverInfo[@"appkey"];
-        if (appkey){
-            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
-                [MaticooMediationTrackManager trackMediationInitSuccess];
-            } onError:^(NSError* error) {
-                [MaticooMediationTrackManager trackMediationInitFailed:error];
-            }];
-        }
+//        [[MaticooAds shareSDK] setMediationName:@"topon"];
+//        NSString *appkey = serverInfo[@"appkey"];
+//        if (appkey){
+//            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+//                [MaticooMediationTrackManager trackMediationInitSuccess];
+//            } onError:^(NSError* error) {
+//                [MaticooMediationTrackManager trackMediationInitFailed:error];
+//            }];
+//        }
     }
     return self;
 }
@@ -98,11 +98,21 @@
         completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to load interstitial.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
         return;
     }
-
-    _interstitial = [[MATInterstitialAd alloc] initWithPlacementID:placementIdentifier];
-    _interstitial.delegate = _customEvent;
-    [_interstitial loadAd];
-    [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];
+    
+    [[MaticooAds shareSDK] setMediationName:@"topon"];
+    NSString *appkey = serverInfo[@"appkey"];
+    if (appkey){
+        [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+            [MaticooMediationTrackManager trackMediationInitSuccess];
+            self.interstitial = [[MATInterstitialAd alloc] initWithPlacementID:placementIdentifier];
+            self.interstitial.delegate = self->_customEvent;
+            [self.interstitial loadAd];
+            [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];
+        } onError:^(NSError* error) {
+            [MaticooMediationTrackManager trackMediationInitFailed:error];
+            completion(nil,error);
+        }];
+    }
 }
 
 +(BOOL) adReadyWithCustomObject:(id)customObject info:(NSDictionary*)info {

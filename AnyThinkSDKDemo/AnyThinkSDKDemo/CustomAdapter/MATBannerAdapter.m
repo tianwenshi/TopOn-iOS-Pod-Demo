@@ -52,15 +52,15 @@
 -(instancetype) initWithNetworkCustomInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo {
     self = [super init];
     if (self != nil) {
-        [[MaticooAds shareSDK] setMediationName:@"topon"];
-        NSString *appkey = serverInfo[@"appkey"];
-        if (appkey){
-            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
-                [MaticooMediationTrackManager trackMediationInitSuccess];
-            } onError:^(NSError* error) {
-                [MaticooMediationTrackManager trackMediationInitFailed:error];
-            }];
-        }
+//        [[MaticooAds shareSDK] setMediationName:@"topon"];
+//        NSString *appkey = serverInfo[@"appkey"];
+//        if (appkey){
+//            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+//                [MaticooMediationTrackManager trackMediationInitSuccess];
+//            } onError:^(NSError* error) {
+//                [MaticooMediationTrackManager trackMediationInitFailed:error];
+//            }];
+//        }
     }
     return self;
 }
@@ -72,21 +72,30 @@
 
     _customEvent = [[MATBannerCustomEvent alloc] initWithInfo:serverInfo localInfo:localInfo];
     _customEvent.requestCompletionBlock = completion;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSString *placementIdentifier = serverInfo[@"placement_id"];
-        if (placementIdentifier == nil){
-            completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to banner.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
-            return;
-        }
-        self->_bannerAd = [[NSClassFromString(@"MATBannerAd") alloc] initWithPlacementID:placementIdentifier];
-//        self->_bannerAd = [[MATBannerAd alloc] initWithPlacementID:serverInfo[@"placement_id"]];
-        self->_bannerAd.delegate = self->_customEvent;
-        [self->_bannerAd loadAd];
-        self->_bannerAd.frame = CGRectMake(0, 0, adSize.width, adSize.width);
+    [[MaticooAds shareSDK] setMediationName:@"topon"];
+    NSString *appkey = serverInfo[@"appkey"];
+    if (appkey){
+        [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+            [MaticooMediationTrackManager trackMediationInitSuccess];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *placementIdentifier = serverInfo[@"placement_id"];
+                if (placementIdentifier == nil){
+                    completion(nil, [NSError errorWithDomain:ATADLoadingErrorDomain code:ATADLoadingErrorCodeThirdPartySDKNotImportedProperly userInfo:@{NSLocalizedDescriptionKey:@"AT has failed to banner.", NSLocalizedFailureReasonErrorKey:@"placementid cannot be nill"}]);
+                    return;
+                }
+                self->_bannerAd = [[NSClassFromString(@"MATBannerAd") alloc] initWithPlacementID:placementIdentifier];
+                self->_bannerAd.delegate = self->_customEvent;
+                [self->_bannerAd loadAd];
+                self->_bannerAd.frame = CGRectMake(0, 0, adSize.width, adSize.width);
 
-        [MaticooMediationTrackManager trackMediationInitSuccess];
-        [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:BANNER isAutoRefresh:NO];
-    });
+                [MaticooMediationTrackManager trackMediationInitSuccess];
+                [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:BANNER isAutoRefresh:NO];
+            });
+        } onError:^(NSError* error) {
+            [MaticooMediationTrackManager trackMediationInitFailed:error];
+            completion(nil,error);
+        }];
+    }
 }
 
 +(void) showBanner:(ATBanner*)banner inView:(UIView*)view presentingViewController:(UIViewController*)viewController {

@@ -82,15 +82,15 @@
     self = [super init];
     if (self != nil) {
         //TODO: add some code for initialize Network SDK
-        [[MaticooAds shareSDK] setMediationName:@"topon"];
-        NSString *appkey = serverInfo[@"appkey"];
-        if (appkey){
-            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
-                [MaticooMediationTrackManager trackMediationInitSuccess];
-            } onError:^(NSError* error) {
-                [MaticooMediationTrackManager trackMediationInitFailed:error];
-            }];
-        }
+//        [[MaticooAds shareSDK] setMediationName:@"topon"];
+//        NSString *appkey = serverInfo[@"appkey"];
+//        if (appkey){
+//            [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+//                [MaticooMediationTrackManager trackMediationInitSuccess];
+//            } onError:^(NSError* error) {
+//                [MaticooMediationTrackManager trackMediationInitFailed:error];
+//            }];
+//        }
     }
     return self;
 }
@@ -110,17 +110,27 @@
         return;
     }
     
-    self.rewardedVideoAd = [[MATRewardedVideoAd alloc] initWithPlacementID: placementIdentifier];
-    self.rewardedVideoAd.delegate = _customEvent;
-    
-    if ( [self.rewardedVideoAd isReady] )
-    {
-        completion(nil, nil);
-    }
-    else
-    {
-        [self.rewardedVideoAd loadAd];
-        [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
+    [[MaticooAds shareSDK] setMediationName:@"topon"];
+    NSString *appkey = serverInfo[@"appkey"];
+    if (appkey){
+        [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
+            [MaticooMediationTrackManager trackMediationInitSuccess];
+            self.rewardedVideoAd = [[MATRewardedVideoAd alloc] initWithPlacementID: placementIdentifier];
+            self.rewardedVideoAd.delegate = _customEvent;
+            
+            if ( [self.rewardedVideoAd isReady] )
+            {
+                completion(nil, nil);
+            }
+            else
+            {
+                [self.rewardedVideoAd loadAd];
+                [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];
+            }
+        } onError:^(NSError* error) {
+            [MaticooMediationTrackManager trackMediationInitFailed:error];
+            completion(nil, error);
+        }];
     }
 }
 
