@@ -133,7 +133,7 @@
         [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
             [MaticooMediationTrackManager trackMediationInitSuccess];
             self.rewardedVideoAd = [[MATRewardedVideoAd alloc] initWithPlacementID: placementIdentifier];
-            self.rewardedVideoAd.delegate = _customEvent;
+            self.rewardedVideoAd.delegate = self->_customEvent;
             
             if ( [self.rewardedVideoAd isReady] )
             {
