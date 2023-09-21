@@ -930,6 +930,7 @@
 					"$(PROJECT_DIR)/Pods/AnyThinkiOS/admob",
 					"$(PROJECT_DIR)/Pods/AnyThinkiOS/sigmob",
 					"$(PROJECT_DIR)/AnyThinkSDKDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Other/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -972,6 +973,7 @@
 					"$(PROJECT_DIR)/Pods/AnyThinkiOS/admob",
 					"$(PROJECT_DIR)/Pods/AnyThinkiOS/sigmob",
 					"$(PROJECT_DIR)/AnyThinkSDKDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Other/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

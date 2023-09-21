@@ -55,6 +55,7 @@
 
 - (NSDictionary<NSString *,NSString *> *)placementIDs {
     return @{
+        @"zMaticoo":          @"b64f5dca2b181e",
         @"ADX":               @"b62b4192930123",
         @"All":               @"b62b420af2495a",
         @"Applovin":          @"b62b420ae88f2d",
@@ -79,7 +80,6 @@
         @"GDT":               @"b62ea19b2d10b7",
         @"Yandex":            @"b62ea19cb6e482",
         @"Bigo":              @"b63909d6ca2269",
-        @"zMaticoo":          @"b64f5dca2b181e",
     };
 }
 
