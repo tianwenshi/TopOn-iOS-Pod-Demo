@@ -72,6 +72,7 @@
         @"Vungle":                    @"b62b41257a99ad",
         @"Nend":                      @"b62ea207862e3c",
         @"Bigo":                @"b63909d9a254cd",
+        @"zMaticoo":                @"b64f5e0f85e3ea",
     };
 }
 

@@ -8,7 +8,6 @@
 
 #import "MATBannerAdapter.h"
 #import "MaticooMediationTrackManager.h"
-
 @import MaticooSDK;
 
 @interface MATBannerCustomEvent : ATBannerCustomEvent <MATBannerViewDelegate>
@@ -46,7 +45,7 @@
 
 @interface MATBannerAdapter()
 @property (nonatomic, readonly) MATBannerCustomEvent *customEvent;
-@property(nonatomic, readonly) id<MATBannerView> bannerAd;;
+@property(nonatomic, strong) id<MATBannerView> bannerAd;
 @end
 
 @implementation MATBannerAdapter

@@ -50,6 +50,7 @@
         @"Kuaishou(Template)":        @"b62ea1d6c5b92f",
         @"Klevin(Template)":          @"b62ea1e3f2a62b",
         @"MyTarget(Template)":        @"b62ea1e8da3189",
+        @"zMaticoo":                @"b64f5e0f85e3ea",
     };
 }
 
