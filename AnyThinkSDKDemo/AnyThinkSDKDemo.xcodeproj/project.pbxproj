@@ -42,6 +42,13 @@
 		9B1A9F6A288FCA4300CC16FA /* ATDrawListAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A9F68288FCA4200CC16FA /* ATDrawListAdCell.m */; };
 		9B1A9F6B288FCA4300CC16FA /* ATDrawListAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A9F69288FCA4200CC16FA /* ATDrawListAdCell.xib */; };
 		9B6DF73D259436DD004E9FDB /* ATSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DF73C259436DD004E9FDB /* ATSplashViewController.m */; };
+		9B92803E2ABC28900024D204 /* AnyThinkSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B92803D2ABC28900024D204 /* AnyThinkSDKDemoUITests.m */; };
+		9B9280402ABC28900024D204 /* AnyThinkSDKDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B92803F2ABC28900024D204 /* AnyThinkSDKDemoUITestsLaunchTests.m */; };
+		9B92804B2ABC28D50024D204 /* InterstitialTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9280462ABC28D40024D204 /* InterstitialTest.m */; };
+		9B92804C2ABC28D50024D204 /* SplashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9280472ABC28D40024D204 /* SplashTest.m */; };
+		9B92804D2ABC28D50024D204 /* RewardVideoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9280482ABC28D40024D204 /* RewardVideoTest.m */; };
+		9B92804E2ABC28D50024D204 /* BannerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9280492ABC28D40024D204 /* BannerTest.m */; };
+		9B92804F2ABC28D50024D204 /* NativeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B92804A2ABC28D50024D204 /* NativeTest.m */; };
 		9B9FEC11288FE91A00B905ED /* ATDrawListOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FEC0F288FE91A00B905ED /* ATDrawListOtherCell.m */; };
 		9B9FEC12288FE91A00B905ED /* ATDrawListOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B9FEC10288FE91A00B905ED /* ATDrawListOtherCell.xib */; };
 		9B9FEC182890188600B905ED /* testvideo0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9FEC172890188600B905ED /* testvideo0.mp4 */; };
@@ -84,6 +91,16 @@
 		E0F3B8A8286D75B7007CF5AB /* ATNativeListOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0F3B8A6286D75B7007CF5AB /* ATNativeListOtherCell.xib */; };
 		E0F3B8AB286D973F007CF5AB /* ATDemoOfferAdMode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F3B8AA286D973F007CF5AB /* ATDemoOfferAdMode.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B9280412ABC28900024D204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BBD008C24863047009EAD66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BBD009324863048009EAD66;
+			remoteInfo = AnyThinkSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04CF320B2800078F0083B5AA /* ATHomeFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHomeFootView.h; sourceTree = "<group>"; };
@@ -162,6 +179,14 @@
 		9B1A9F69288FCA4200CC16FA /* ATDrawListAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATDrawListAdCell.xib; sourceTree = "<group>"; };
 		9B6DF73B259436DD004E9FDB /* ATSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSplashViewController.h; sourceTree = "<group>"; };
 		9B6DF73C259436DD004E9FDB /* ATSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSplashViewController.m; sourceTree = "<group>"; };
+		9B92803B2ABC288F0024D204 /* AnyThinkSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyThinkSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B92803D2ABC28900024D204 /* AnyThinkSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyThinkSDKDemoUITests.m; sourceTree = "<group>"; };
+		9B92803F2ABC28900024D204 /* AnyThinkSDKDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyThinkSDKDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		9B9280462ABC28D40024D204 /* InterstitialTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialTest.m; sourceTree = "<group>"; };
+		9B9280472ABC28D40024D204 /* SplashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashTest.m; sourceTree = "<group>"; };
+		9B9280482ABC28D40024D204 /* RewardVideoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardVideoTest.m; sourceTree = "<group>"; };
+		9B9280492ABC28D40024D204 /* BannerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerTest.m; sourceTree = "<group>"; };
+		9B92804A2ABC28D50024D204 /* NativeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeTest.m; sourceTree = "<group>"; };
 		9B9FEC0E288FE91A00B905ED /* ATDrawListOtherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATDrawListOtherCell.h; sourceTree = "<group>"; };
 		9B9FEC0F288FE91A00B905ED /* ATDrawListOtherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATDrawListOtherCell.m; sourceTree = "<group>"; };
 		9B9FEC10288FE91A00B905ED /* ATDrawListOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATDrawListOtherCell.xib; sourceTree = "<group>"; };
@@ -227,6 +252,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B9280382ABC288F0024D204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BBD009124863048009EAD66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +570,20 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		9B92803C2ABC28900024D204 /* AnyThinkSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B92803D2ABC28900024D204 /* AnyThinkSDKDemoUITests.m */,
+				9B92803F2ABC28900024D204 /* AnyThinkSDKDemoUITestsLaunchTests.m */,
+				9B9280492ABC28D40024D204 /* BannerTest.m */,
+				9B9280462ABC28D40024D204 /* InterstitialTest.m */,
+				9B92804A2ABC28D50024D204 /* NativeTest.m */,
+				9B9280482ABC28D40024D204 /* RewardVideoTest.m */,
+				9B9280472ABC28D40024D204 /* SplashTest.m */,
+			);
+			path = AnyThinkSDKDemoUITests;
+			sourceTree = "<group>";
+		};
 		9B9FEC03288FE80F00B905ED /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBD009624863048009EAD66 /* AnyThinkSDKDemo */,
+				9B92803C2ABC28900024D204 /* AnyThinkSDKDemoUITests */,
 				9BBD009524863048009EAD66 /* Products */,
 				2F88623D9B59A22EF880A819 /* Pods */,
 				1BE5C78DE8928691D97412C1 /* Frameworks */,
@@ -560,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBD009424863048009EAD66 /* AnyThinkSDKDemo.app */,
+				9B92803B2ABC288F0024D204 /* AnyThinkSDKDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -596,6 +644,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B92803A2ABC288F0024D204 /* AnyThinkSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B9280452ABC28900024D204 /* Build configuration list for PBXNativeTarget "AnyThinkSDKDemoUITests" */;
+			buildPhases = (
+				9B9280372ABC288F0024D204 /* Sources */,
+				9B9280382ABC288F0024D204 /* Frameworks */,
+				9B9280392ABC288F0024D204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B9280422ABC28900024D204 /* PBXTargetDependency */,
+			);
+			name = AnyThinkSDKDemoUITests;
+			productName = AnyThinkSDKDemoUITests;
+			productReference = 9B92803B2ABC288F0024D204 /* AnyThinkSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9BBD009324863048009EAD66 /* AnyThinkSDKDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BBD00AD2486304C009EAD66 /* Build configuration list for PBXNativeTarget "AnyThinkSDKDemo" */;
@@ -625,6 +691,10 @@
 				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "抽筋的灯";
 				TargetAttributes = {
+					9B92803A2ABC288F0024D204 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9BBD009324863048009EAD66;
+					};
 					9BBD009324863048009EAD66 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -644,11 +714,19 @@
 			projectRoot = "";
 			targets = (
 				9BBD009324863048009EAD66 /* AnyThinkSDKDemo */,
+				9B92803A2ABC288F0024D204 /* AnyThinkSDKDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B9280392ABC288F0024D204 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BBD009224863048009EAD66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -726,6 +804,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B9280372ABC288F0024D204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B9280402ABC28900024D204 /* AnyThinkSDKDemoUITestsLaunchTests.m in Sources */,
+				9B92804E2ABC28D50024D204 /* BannerTest.m in Sources */,
+				9B92804F2ABC28D50024D204 /* NativeTest.m in Sources */,
+				9B92803E2ABC28900024D204 /* AnyThinkSDKDemoUITests.m in Sources */,
+				9B92804C2ABC28D50024D204 /* SplashTest.m in Sources */,
+				9B92804B2ABC28D50024D204 /* InterstitialTest.m in Sources */,
+				9B92804D2ABC28D50024D204 /* RewardVideoTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BBD009024863048009EAD66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -783,6 +875,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9B9280422ABC28900024D204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BBD009324863048009EAD66 /* AnyThinkSDKDemo */;
+			targetProxy = 9B9280412ABC28900024D204 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9BBD00A024863048009EAD66 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -803,6 +903,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9B9280432ABC28900024D204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.medation.AnyThinkSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnyThinkSDKDemo;
+			};
+			name = Debug;
+		};
+		9B9280442ABC28900024D204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LAPXCLH73Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.medation.AnyThinkSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnyThinkSDKDemo;
+			};
+			name = Release;
+		};
 		9BBD00AB2486304C009EAD66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1004,6 +1146,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B9280452ABC28900024D204 /* Build configuration list for PBXNativeTarget "AnyThinkSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B9280432ABC28900024D204 /* Debug */,
+				9B9280442ABC28900024D204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BBD008F24863047009EAD66 /* Build configuration list for PBXProject "AnyThinkSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
