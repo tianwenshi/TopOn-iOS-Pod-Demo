@@ -34,13 +34,11 @@
 
 - (void)nativeAdFailed:(nonnull MATNativeAd *)nativeAd withError:(nonnull NSError *)error {
     self.requestCompletionBlock(nil, error);
-//    [self trackNativeAdLoadFailed:error];
     [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE];
 }
 
 - (void)nativeAdLoadSuccess:(nonnull MATNativeAd *)nativeAd {
     NSMutableArray<NSDictionary*>* assets = [NSMutableArray<NSDictionary*> array];
-//    NSMutableDictionary *assets = [NSMutableDictionary dictionaryWithObjectsAndKeys:nativeAd, kATAdAssetsCustomObjectKey, nil];
     NSMutableDictionary *asset = [NSMutableDictionary dictionary];
     asset[kATAdAssetsCustomObjectKey] = nativeAd;
     asset[kATNativeADAssetsMainTitleKey] = nativeAd.nativeElements.title;
@@ -51,18 +49,20 @@
         NSData* brandLogoData = [[NSData alloc]initWithBase64EncodedString:nativeAd.nativeElements.brandLogo options:0];
         asset[kATNativeADAssetsLogoImageKey] = [UIImage imageWithData:brandLogoData];
     }
+    dispatch_group_t image_download_group = dispatch_group_create();
+    dispatch_group_enter(image_download_group);
     if (nativeAd.nativeElements.iconUrl){
-        dispatch_group_t image_download_group = dispatch_group_create();
-        dispatch_group_enter(image_download_group);
                [[ATImageLoader shareLoader] loadImageWithURL:[NSURL URLWithString:nativeAd.nativeElements.iconUrl] completion:^(UIImage *image, NSError *error) {
                    if ([image isKindOfClass:[UIImage class]]) { asset[kATNativeADAssetsIconImageKey] = image; }
                    dispatch_group_leave(image_download_group);
        }];
+    }else{
+        dispatch_group_leave(image_download_group);
     }
-    [assets addObject:asset];
-
-//    [self trackNativeAdLoaded:assets];
-    self.requestCompletionBlock(assets, nil);
+    dispatch_group_notify(image_download_group, dispatch_get_main_queue(), ^{
+        [assets addObject:asset];
+        self.requestCompletionBlock(assets, nil);
+    });
 }
 
 @end

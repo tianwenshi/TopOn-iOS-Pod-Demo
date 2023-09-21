@@ -53,14 +53,11 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.nativeAd = [[NSClassFromString(@"MATNativeAd") alloc] initWithPlacementID:placementIdentifier];
                 self.nativeAd.delegate = self->_customEvent;
-                CGSize size = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 30.0f, 200.0f);
                 NSDictionary *extraInfo = localInfo;
                 if (extraInfo[kATNativeADAssetsIsExpressAdKey]){
                     [self.nativeAd setAdTemplateStyle];
                 }
-//                CGSize size = [extraInfo[kExtraInfoNativeAdSizeKey] respondsToSelector:@selector(CGSizeValue)] ? [extraInfo[kATExtraInfoNativeAdSizeKeykATExtraInfoNativeAdSizeKey] CGSizeValue] : CGSizeMake(320.0f, 250.0f);
-//                NSString *sizeKey = [serverInfo[@"media_size"] integerValue] > 0 ? @{@2:kATExtraNativeImageSize228_150, @1:kATExtraNativeImageSize690_388}[serverInfo[@"media_size"]] : extraInfo[kATExtraNativeImageSizeKey];
-//                NSInteger imgSize = [@{kATExtraNativeImageSize228_150:@9, kATExtraNativeImageSize690_388:@10}[sizeKey] integerValue];
+                CGSize size = [extraInfo[kATExtraInfoAdSizeKey] respondsToSelector:@selector(CGSizeValue)] ? [extraInfo[kATExtraInfoAdSizeKey] CGSizeValue] : CGSizeMake(300.0f, 250.0f);
                 [self.nativeAd setAdSize:size];
                 [self.nativeAd loadAd];
             });
@@ -69,8 +66,6 @@
             completion(nil,error);
         }];
     }
-    
-
     
 //    NSDictionary *extraInfo = localInfo;
 //    _customEvent.requestExtra = extraInfo;
