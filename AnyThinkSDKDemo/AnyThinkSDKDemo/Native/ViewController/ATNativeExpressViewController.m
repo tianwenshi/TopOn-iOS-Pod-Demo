@@ -122,6 +122,7 @@
         kATExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:size],
         // 是否开启自适应高度，默认关闭，设置为yes时打开
         kATNativeAdSizeToFitKey:@YES,
+        kATNativeADAssetsIsExpressAdKey:@YES
     };
     [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:extra delegate:self];
 }

@@ -46,6 +46,7 @@
     
     [[MaticooAds shareSDK] setMediationName:@"topon"];
     NSString *appkey = serverInfo[@"appkey"];
+    
     if (appkey){
         [[MaticooAds shareSDK] initSDK:appkey onSuccess:^() {
             [MaticooMediationTrackManager trackMediationInitSuccess];
@@ -53,7 +54,10 @@
                 self.nativeAd = [[NSClassFromString(@"MATNativeAd") alloc] initWithPlacementID:placementIdentifier];
                 self.nativeAd.delegate = self->_customEvent;
                 CGSize size = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 30.0f, 200.0f);
-//                NSDictionary *extraInfo = localInfo;
+                NSDictionary *extraInfo = localInfo;
+                if (extraInfo[kATNativeADAssetsIsExpressAdKey]){
+                    [self.nativeAd setAdTemplateStyle];
+                }
 //                CGSize size = [extraInfo[kExtraInfoNativeAdSizeKey] respondsToSelector:@selector(CGSizeValue)] ? [extraInfo[kATExtraInfoNativeAdSizeKeykATExtraInfoNativeAdSizeKey] CGSizeValue] : CGSizeMake(320.0f, 250.0f);
 //                NSString *sizeKey = [serverInfo[@"media_size"] integerValue] > 0 ? @{@2:kATExtraNativeImageSize228_150, @1:kATExtraNativeImageSize690_388}[serverInfo[@"media_size"]] : extraInfo[kATExtraNativeImageSizeKey];
 //                NSInteger imgSize = [@{kATExtraNativeImageSize228_150:@9, kATExtraNativeImageSize690_388:@10}[sizeKey] integerValue];

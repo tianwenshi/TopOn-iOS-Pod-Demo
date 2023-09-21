@@ -24,7 +24,12 @@
     
     MATNativeAd *nativeAd = offer.assets[kATAdAssetsCustomObjectKey];
     self.mediaView = nativeAd.nativeElements.mediaView;
-    [self.ADView addSubview:self.mediaView];
+    if (self.mediaView){
+        [self.ADView addSubview:self.mediaView];
+    }else{
+        [self.ADView addSubview:nativeAd];
+        self.mediaView = nativeAd;
+    }
     self.mediaView.center = CGPointMake(CGRectGetMidX(self.ADView.bounds), CGRectGetMidY(self.ADView.bounds));
     [nativeAd registerViewForInteraction:self.ADView iConView:nil CTAView:nil];
 //    nativeAd.delegate = _customEvent;

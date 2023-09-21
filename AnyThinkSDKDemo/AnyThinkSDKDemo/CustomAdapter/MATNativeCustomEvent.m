@@ -47,15 +47,20 @@
     asset[kATNativeADAssetsMainTextKey] = nativeAd.nativeElements.describe;
     asset[kATNativeADAssetsCTATextKey] = nativeAd.nativeElements.ctatext;
     asset[kATAdAssetsCustomEventKey] = self;
-    NSData* brandLogoData = [[NSData alloc]initWithBase64EncodedString:nativeAd.nativeElements.brandLogo options:0];
-    asset[kATNativeADAssetsLogoImageKey] = [UIImage imageWithData:brandLogoData];
-    dispatch_group_t image_download_group = dispatch_group_create();
-    dispatch_group_enter(image_download_group);
-           [[ATImageLoader shareLoader] loadImageWithURL:[NSURL URLWithString:nativeAd.nativeElements.iconUrl] completion:^(UIImage *image, NSError *error) {
-               if ([image isKindOfClass:[UIImage class]]) { asset[kATNativeADAssetsIconImageKey] = image; }
-               dispatch_group_leave(image_download_group);
-   }];
+    if (nativeAd.nativeElements.brandLogo){
+        NSData* brandLogoData = [[NSData alloc]initWithBase64EncodedString:nativeAd.nativeElements.brandLogo options:0];
+        asset[kATNativeADAssetsLogoImageKey] = [UIImage imageWithData:brandLogoData];
+    }
+    if (nativeAd.nativeElements.iconUrl){
+        dispatch_group_t image_download_group = dispatch_group_create();
+        dispatch_group_enter(image_download_group);
+               [[ATImageLoader shareLoader] loadImageWithURL:[NSURL URLWithString:nativeAd.nativeElements.iconUrl] completion:^(UIImage *image, NSError *error) {
+                   if ([image isKindOfClass:[UIImage class]]) { asset[kATNativeADAssetsIconImageKey] = image; }
+                   dispatch_group_leave(image_download_group);
+       }];
+    }
     [assets addObject:asset];
+
 //    [self trackNativeAdLoaded:assets];
     self.requestCompletionBlock(assets, nil);
 }
