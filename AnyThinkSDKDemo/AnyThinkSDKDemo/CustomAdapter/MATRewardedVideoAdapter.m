@@ -11,7 +11,7 @@
 @import MaticooSDK;
 
 @interface MATRewardedVideoCustomEvent : ATRewardedVideoCustomEvent <MATRewardedVideoAdDelegate>
-//@property (nonatomic, strong)MATRewardedVideoAd *rewardedVideo;
+//@property (nonatomic, strong)MATRewardedVideoAd *zMaticooRV;
 @end
 
 @implementation MATRewardedVideoCustomEvent
@@ -41,7 +41,7 @@
 
 - (void)rewardedVideoAdCompleted:(MATRewardedVideoAd *)rewardedVideoAd{
     //For XCTest
-//    self.rewardedVideo = rewardedVideoAd;
+//    self.zMaticooRV = rewardedVideoAd;
 //    UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 2, 2)];
 //    closeBtn.backgroundColor = [UIColor blackColor];
 //    closeBtn.accessibilityIdentifier = @"ad_closeBtn";
@@ -57,7 +57,7 @@
 
 //For XCTest
 //- (void)closeButtonTouchDown:(UIButton*)btn {
-//    [self.rewardedVideo.modalViewController dismissViewControllerAnimated:YES completion:nil];
+//    [self.zMaticooRV.modalViewController dismissViewControllerAnimated:YES completion:nil];
 //}
 
 - (void)rewardedVideoAdWillLogImpression:(MATRewardedVideoAd *)rewardedVideoAd{
