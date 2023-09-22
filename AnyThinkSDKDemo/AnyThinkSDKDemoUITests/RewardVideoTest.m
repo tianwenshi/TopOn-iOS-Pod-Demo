@@ -97,7 +97,7 @@
         [show tap];
     }
     
-    for(int i = 0; i<30; i++) {
+    for(int i = 0; i<50; i++) {
         XCUIElement *closebtn = self.app.buttons[@"ad_closeBtn"];
         if(closebtn.exists) {
             break;

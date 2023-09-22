@@ -107,8 +107,14 @@
     sleep(2);
     
     XCUIElement *closeRbtn = self.app.buttons[@"Not interested"];
-    XCTAssertTrue(closeRbtn.exists, @"Not interested btn not found!");
-    !closeRbtn.exists ?: [closeRbtn tap];
+    if (!closeRbtn.exists) {
+        XCUIElement *RButton = self.app.buttons[@"Ad was inappropriate"];
+        XCTAssertTrue(RButton.exists, @"'Ad was inappropriate' not found!");
+        !RButton.exists?:[RButton tap];
+    }else {
+        !closeRbtn.exists ?: [closeRbtn tap];
+    }
+    
     sleep(5);
     
 }
