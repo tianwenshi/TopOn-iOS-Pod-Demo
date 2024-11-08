@@ -170,6 +170,7 @@
 		56152C392902B59A00530FF6 /* ATTMCustomSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTMCustomSplashViewController.h; sourceTree = "<group>"; };
 		85EEA80B39960C835625EC2F /* Pods-AnyThinkSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyThinkSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnyThinkSDKDemo/Pods-AnyThinkSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD0B6472CDE0F5E0063F22C /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
+		8FD0B64B2CDE17A00063F22C /* MaticooTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooTest.h; sourceTree = "<group>"; };
 		9B1A9D6A288E82C800CC16FA /* ATNativeMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNativeMainViewController.m; sourceTree = "<group>"; };
 		9B1A9D6B288E82C800CC16FA /* ATNativeMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNativeMainViewController.h; sourceTree = "<group>"; };
 		9B1A9F5C288F882800CC16FA /* ATPasterVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPasterVideoViewController.h; sourceTree = "<group>"; };
@@ -630,6 +631,7 @@
 				04CF320F2800078F0083B5AA /* BaseVc */,
 				9B1A9D64288E48A600CC16FA /* Categorie */,
 				9B1A9D66288E496D00CC16FA /* Other */,
+				8FD0B64B2CDE17A00063F22C /* MaticooTest.h */,
 			);
 			path = AnyThinkSDKDemo;
 			sourceTree = "<group>";

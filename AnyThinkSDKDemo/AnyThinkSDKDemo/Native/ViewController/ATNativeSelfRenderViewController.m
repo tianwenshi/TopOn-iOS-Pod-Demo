@@ -18,6 +18,7 @@
 #import "ATMenuView.h"
 #import "ATNativeSelfRenderView.h"
 #import "ATUtilitiesTool.h"
+#import "MaticooTest.h"
 
 @interface ATNativeSelfRenderViewController()<ATNativeADDelegate>
 
@@ -209,7 +210,8 @@
         size = self.view.frame.size;
     }
     
-    NSDictionary *extra = @{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict addEntriesFromDictionary:@{
         // 模板广告size，透传给广告平台，广告平台会返回相近尺寸的最优模板广告
         kATExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:size],
         kATExtraNativeImageSizeKey:kATExtraNativeImageSize690_388,
@@ -218,8 +220,13 @@
         // Start APP
         kATExtraNativeIconImageSizeKey: @(AT_SIZE_72X72),
         kATExtraStartAPPNativeMainImageSizeKey:@(AT_SIZE_1200X628),
-    };
-    [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:extra delegate:self];
+    }];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+    }
+    
+    [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:dict delegate:self];
 }
 
 //检查广告缓存

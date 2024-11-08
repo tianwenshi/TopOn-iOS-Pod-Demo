@@ -12,6 +12,7 @@
 #import "ATADFootView.h"
 #import "ATModelButton.h"
 #import "ATMenuView.h"
+#import "MaticooTest.h"
 
 //#import <GoogleMobileAds/GoogleMobileAds.h>
 
@@ -173,7 +174,9 @@
      Note that banner ads on different platforms have certain restrictions. For example, the configured CSJ(TT) banner AD is 640*100. In order to fill the screen width, the height H = (screen width *100)/640 is calculated. Then the extra size of the load is (screen width: H).
      */
 
-    NSDictionary *dict = @{
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict addEntriesFromDictionary:@{
         // 设置请求的广告尺寸大小
         kATAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize],
         // 仅Nend平台支持
@@ -181,7 +184,12 @@
 //        // 仅Admob平台支持，自适应横幅大小
 //        kATAdLoadingExtraAdmobBannerSizeKey:[NSValue valueWithCGSize:admobSize.size],
 //        kATAdLoadingExtraAdmobAdSizeFlagsKey:@(admobSize.flags)
-    };
+    }];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+    }
+    
     [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:dict delegate:self];
 }
 

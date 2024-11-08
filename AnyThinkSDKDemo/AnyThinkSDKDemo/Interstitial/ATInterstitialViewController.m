@@ -13,6 +13,7 @@
 #import "ATModelButton.h"
 #import "ATADFootView.h"
 #import "ATMenuView.h"
+#import "MaticooTest.h"
 
 
 @interface ATInterstitialViewController ()<ATInterstitialDelegate>
@@ -227,15 +228,21 @@
 // 加载广告
 - (void)loadAd {
     CGSize size = CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 300.0f);
-    NSDictionary *extraDic = @{
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict addEntriesFromDictionary:@{
         // 设置半屏插屏广告大小，支持平台：快手，可能会影响展示效果
         kATInterstitialExtraAdSizeKey:[NSValue valueWithCGSize:size],
-    };
+    }];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+    }
 
     if (_isAuto) {
         [[ATInterstitialAutoAdManager sharedInstance] showAutoLoadInterstitialWithPlacementID:self.placementID scene:@"f5e549727efc49" inViewController:self delegate:self];
     } else {
-        [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:extraDic delegate:self];
+        [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:dict delegate:self];
     }
 }
 

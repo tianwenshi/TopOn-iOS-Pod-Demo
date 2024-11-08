@@ -13,6 +13,7 @@
 #import "ATModelButton.h"
 #import "ATMenuView.h"
 #import "ATUtilitiesTool.h"
+#import "MaticooTest.h"
 
 @interface ATNativeExpressViewController()<ATNativeADDelegate>
 
@@ -116,15 +117,21 @@
 //广告加载
 - (void)loadAd {
     CGSize size = CGSizeMake(kScreenW, 350);
-
-    NSDictionary *extra = @{
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict addEntriesFromDictionary:@{
         // 模板广告size，透传给广告平台，广告平台会返回相近尺寸的最优模板广告
         kATExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:size],
         // 是否开启自适应高度，默认关闭，设置为yes时打开
         kATNativeAdSizeToFitKey:@YES,
         kATNativeADAssetsIsExpressAdKey:@YES
-    };
-    [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:extra delegate:self];
+    }];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+    }
+        
+    [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:dict delegate:self];
 }
 
 //检查广告缓存

@@ -8,6 +8,7 @@
 #import "ATRewardVideoViewController.h"
 #import <AnyThinkRewardedVideo/AnyThinkRewardedVideo.h>
 #import "ATModelButton.h"
+#import "MaticooTest.h"
 
 @interface ATRewardVideoViewController () <ATRewardedVideoDelegate>
 @property (nonatomic, strong) ATModelButton *modelButton;
@@ -136,7 +137,9 @@
 #pragma mark - Action
 // 加载广告
 - (void)loadAd {
-    NSDictionary *dict = @{
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict addEntriesFromDictionary:@{
         /// 以下几个key参数适用于广告平台的服务端激励验证，将被透传
         kATAdLoadingExtraMediaExtraKey:@"media_val",
         kATAdLoadingExtraUserIDKey:@"rv_test_user_id",
@@ -149,7 +152,11 @@
 //        kATRewardedVideoKlevinRewardTriggerKey : @1,
         /// 仅游可赢平台可用， 激励卡秒时长
 //        kATRewardedVideoKlevinRewardTimeKey : @3,
-    };
+    }];
+    
+    if(MAT_EXTRA_GPID_VALUE.length > 0){
+        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+    }
     
     [[ATAdManager sharedManager] loadADWithPlacementID:self.placementID extra:dict delegate:self];
 }
