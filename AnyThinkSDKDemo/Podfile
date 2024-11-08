@@ -32,7 +32,7 @@ target 'AnyThinkSDKDemo' do
   use_frameworks!
 
   pod 'AnyThinkiOS','6.2.65'
-  pod 'zMaticoo'
+#  pod 'zMaticoo'
   # pod 'AnyThinkiOS/AnyThinkAdmobAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkPangleAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkTTAdapter','6.2.65'
@@ -56,7 +56,7 @@ target 'AnyThinkSDKDemo' do
   # pod 'AnyThinkiOS/AnyThinkKuaiShouAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkBaiduAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkOguryAdapter','6.2.65'
-  # pod 'AnyThinkiOS/AnyThinkAdColonyAdapter','6.2.65'
+#   pod 'AnyThinkiOS/AnyThinkAdColonyAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkYandexAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkBigoAdapter','6.2.65'
   # pod 'AnyThinkiOS/AnyThinkPubNativeAdapter','6.2.65'
