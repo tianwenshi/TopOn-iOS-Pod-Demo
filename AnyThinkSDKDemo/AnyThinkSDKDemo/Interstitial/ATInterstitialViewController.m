@@ -236,7 +236,7 @@
     }];
     
     if(MAT_EXTRA_GPID_VALUE.length > 0){
-        [dict setValue:MAT_EXTRA_GPID forKey:MAT_EXTRA_GPID_VALUE];
+        [dict setValue:MAT_EXTRA_GPID_VALUE forKey:MAT_EXTRA_GPID];
     }
 
     if (_isAuto) {

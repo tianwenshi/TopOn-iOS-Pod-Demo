@@ -11,6 +11,6 @@
 
 
 #define MAT_EXTRA_GPID   @"gpid"
-#define MAT_EXTRA_GPID_VALUE   @"asjddjd"
+#define MAT_EXTRA_GPID_VALUE   @"77777"
 
 #endif /* MaticooTest_h */
