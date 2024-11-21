@@ -116,7 +116,7 @@
             self.interstitial.delegate = self->_customEvent;
             
             if(localInfo != nil && localInfo.count > 0){
-                [self.interstitial setLocalExtra:localInfo];
+                [self.interstitial setLocalExtra:[MaticooMediationTrackManager ensureParams:localInfo]];
             }
             [self.interstitial loadAd];
             [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:INTERSTITIAL isAutoRefresh:NO];

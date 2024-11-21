@@ -85,4 +85,22 @@
     }
 }
 
++ (NSDictionary *)ensureParams:(NSDictionary *)dict{
+    NSMutableDictionary * newDict = [NSMutableDictionary dictionary];
+    
+    @try {
+        [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            if ([obj isKindOfClass:[NSString class]]) {
+                [newDict setValue:obj forKey:key];
+            }
+        }];
+    }@catch (NSException *exception) {
+        
+    } @finally {
+        
+    }
+    
+    return newDict;
+}
+
 @end

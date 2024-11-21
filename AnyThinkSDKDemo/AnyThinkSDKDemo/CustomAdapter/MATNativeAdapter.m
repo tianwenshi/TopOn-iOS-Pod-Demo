@@ -60,7 +60,7 @@
                 CGSize size = [extraInfo[kATExtraInfoAdSizeKey] respondsToSelector:@selector(CGSizeValue)] ? [extraInfo[kATExtraInfoAdSizeKey] CGSizeValue] : CGSizeMake(300.0f, 250.0f);
                 [self.nativeAd setAdSize:size];
                 if(localInfo != nil && localInfo.count > 0){
-                    [(MATNativeAd *)self.nativeAd setLocalExtra:localInfo];
+                    [(MATNativeAd *)self.nativeAd setLocalExtra:[MaticooMediationTrackManager ensureParams:localInfo]];
                 }
                 [self.nativeAd loadAd];
             });

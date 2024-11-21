@@ -151,7 +151,7 @@
             else
             {
                 if(localInfo != nil && localInfo.count > 0){
-                    [self.rewardedVideoAd setLocalExtra:localInfo];
+                    [self.rewardedVideoAd setLocalExtra:[MaticooMediationTrackManager ensureParams:localInfo]];
                 }
                 [self.rewardedVideoAd loadAd];
                 [MaticooMediationTrackManager trackMediationAdRequest:placementIdentifier adType:REWARDEDVIDEO isAutoRefresh:NO];

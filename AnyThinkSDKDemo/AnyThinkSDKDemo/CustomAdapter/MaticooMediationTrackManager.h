@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackMediationAdImpFailed:(NSString*)pid adType:(NSInteger)adtype msg:(NSString*)msg;
 + (void)trackMediationAdClick:(NSString*)pid adType:(NSInteger)adtype;
 + (void)trackMediationAdShow:(NSString*)pid adType:(NSInteger)adtype;
+
++ (NSDictionary *) ensureParams:(NSDictionary *) dict;
 @end
 
 NS_ASSUME_NONNULL_END

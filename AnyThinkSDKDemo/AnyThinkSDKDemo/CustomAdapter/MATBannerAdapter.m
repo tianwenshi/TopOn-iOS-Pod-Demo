@@ -90,7 +90,7 @@
                 self->_bannerAd = [[NSClassFromString(@"MATBannerAd") alloc] initWithPlacementID:placementIdentifier];
                 self->_bannerAd.delegate = self->_customEvent;
                 if(localInfo != nil && localInfo.count > 0){
-                    [(MATBannerAd *)self->_bannerAd setLocalExtra:localInfo];
+                    [(MATBannerAd *)self->_bannerAd setLocalExtra:[MaticooMediationTrackManager ensureParams:localInfo]];
                 }
                 [self->_bannerAd loadAd];
                 self->_bannerAd.frame = CGRectMake(0, 0, adSize.width, adSize.width);
