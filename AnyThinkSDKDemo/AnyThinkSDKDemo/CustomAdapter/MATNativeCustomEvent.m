@@ -23,7 +23,8 @@
 }
 
 - (void)nativeAdDisplayFailed:(nonnull MATNativeAd *)nativeAd {
-    [MaticooMediationTrackManager trackMediationAdImpFailed:nativeAd.placementID adType:NATIVE];
+    
+    [MaticooMediationTrackManager trackMediationAdImpFailed:nativeAd.placementID adType:NATIVE msg:@""];
 }
 
 - (void)nativeAdDisplayed:(nonnull MATNativeAd *)nativeAd {
@@ -34,7 +35,7 @@
 
 - (void)nativeAdFailed:(nonnull MATNativeAd *)nativeAd withError:(nonnull NSError *)error {
     self.requestCompletionBlock(nil, error);
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE];
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeAd.placementID adType:NATIVE msg:@""];
 }
 
 - (void)nativeAdLoadSuccess:(nonnull MATNativeAd *)nativeAd {

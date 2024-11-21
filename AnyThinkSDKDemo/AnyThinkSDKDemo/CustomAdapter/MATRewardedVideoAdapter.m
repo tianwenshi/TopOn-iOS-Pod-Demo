@@ -25,13 +25,22 @@
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
     NSLog(@"%s", __FUNCTION__);
     [self trackRewardedVideoAdLoadFailed:error];
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
+    NSString * msg = @"";
+    if(error){
+        msg = error.description;
+    }
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO msg:msg];
 }
 
 - (void)rewardedVideoAd:(MATRewardedVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error{
     NSLog(@"%s", __FUNCTION__);
     [self trackRewardedVideoAdLoadFailed:error];
-    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO];
+    
+    NSString * msg = @"";
+    if(error){
+        msg = error.description;
+    }
+    [MaticooMediationTrackManager trackMediationAdImpFailed:rewardedVideoAd.placementID adType:REWARDEDVIDEO msg:msg];
 }
 
 - (void)rewardedVideoAdStarted:(MATRewardedVideoAd *)rewardedVideoAd{

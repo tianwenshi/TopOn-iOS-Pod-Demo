@@ -23,7 +23,11 @@
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd didFailWithError:(NSError *)error{
     NSLog(@"%s", __FUNCTION__);
     [self trackInterstitialAdLoadFailed:error];
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL];
+    NSString * msg = @"";
+    if(error){
+        msg = error.description;
+    }
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:interstitialAd.placementID adType:INTERSTITIAL msg:msg];
 }
 
 - (void)interstitialAdWillLogImpression:(MATInterstitialAd *)interstitialAd{
@@ -47,7 +51,11 @@
 - (void)interstitialAd:(MATInterstitialAd *)interstitialAd displayFailWithError:(NSError *)error{
     NSLog(@"%s", __FUNCTION__);
     [self trackInterstitialAdShowFailed: error];
-    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL];
+    NSString * msg = @"";
+    if(error){
+        msg = error.description;
+    }
+    [MaticooMediationTrackManager trackMediationAdImpFailed:interstitialAd.placementID adType:INTERSTITIAL msg:msg];
 }
 
 - (void)interstitialAdWillClose:(nonnull MATInterstitialAd *)interstitialAd {

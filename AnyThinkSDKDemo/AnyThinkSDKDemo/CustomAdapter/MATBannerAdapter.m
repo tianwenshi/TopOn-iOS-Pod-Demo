@@ -21,7 +21,11 @@
 
 - (void)bannerAd:(nonnull MATBannerAd *)nativeBannerAd didFailWithError:(nonnull NSError *)error {
     [self handleLoadingFailure:error];
-    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeBannerAd.placementID adType:BANNER];
+    NSString * msg = @"";
+    if(error){
+        msg = error.description;
+    }
+    [MaticooMediationTrackManager trackMediationAdRequestFailed:nativeBannerAd.placementID adType:BANNER msg:msg];
 }
 
 - (void)bannerAdDidClick:(nonnull MATBannerAd *)banner {
