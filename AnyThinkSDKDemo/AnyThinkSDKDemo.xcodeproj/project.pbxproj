@@ -30,6 +30,7 @@
 		286011C52ABB061400813B76 /* MATNativeRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 286011C42ABB061400813B76 /* MATNativeRenderer.m */; };
 		286011C82ABB065700813B76 /* MATNativeCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 286011C72ABB065700813B76 /* MATNativeCustomEvent.m */; };
 		56152C3F2902B59A00530FF6 /* ATTMCustomSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56152C382902B59A00530FF6 /* ATTMCustomSplashViewController.m */; };
+		8F45A1052DA64013009B5BEE /* MATSplashAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F45A1042DA64013009B5BEE /* MATSplashAdapter.m */; };
 		8FD0B6482CDE0F5E0063F22C /* MaticooSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD0B6472CDE0F5E0063F22C /* MaticooSDK.framework */; };
 		9B1A9D6C288E82C800CC16FA /* ATNativeMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A9D6A288E82C800CC16FA /* ATNativeMainViewController.m */; };
 		9B1A9F5E288F882800CC16FA /* ATPasterVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A9F5D288F882800CC16FA /* ATPasterVideoViewController.m */; };
@@ -164,6 +165,8 @@
 		56152C392902B59A00530FF6 /* ATTMCustomSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTMCustomSplashViewController.h; sourceTree = "<group>"; };
 		85EEA80B39960C835625EC2F /* Pods-AnyThinkSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyThinkSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-AnyThinkSDKDemo/Pods-AnyThinkSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8F45A0FF2DA62775009B5BEE /* AnyThinkBanner.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnyThinkBanner.xcframework; path = Pods/AnyThinkiOS/core/AnyThinkBanner.xcframework; sourceTree = "<group>"; };
+		8F45A1032DA64013009B5BEE /* MATSplashAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MATSplashAdapter.h; sourceTree = "<group>"; };
+		8F45A1042DA64013009B5BEE /* MATSplashAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MATSplashAdapter.m; sourceTree = "<group>"; };
 		8FD0B6472CDE0F5E0063F22C /* MaticooSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaticooSDK.framework; sourceTree = "<group>"; };
 		8FD0B64B2CDE17A00063F22C /* MaticooTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaticooTest.h; sourceTree = "<group>"; };
 		9B1A9D6A288E82C800CC16FA /* ATNativeMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNativeMainViewController.m; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 				286011802AB93A1900813B76 /* MaticooMediationTrackManager.m */,
 				2860117D2AB93A1900813B76 /* MaticooMediationURLSession.h */,
 				286011812AB93A1900813B76 /* MaticooMediationURLSession.m */,
+				8F45A1032DA64013009B5BEE /* MATSplashAdapter.h */,
+				8F45A1042DA64013009B5BEE /* MATSplashAdapter.m */,
 				2860118D2ABA860A00813B76 /* MATInterstitialAdapter.h */,
 				2860118E2ABA860A00813B76 /* MATInterstitialAdapter.m */,
 				286011952ABAC3CE00813B76 /* MATBannerAdapter.h */,
@@ -849,6 +854,7 @@
 				E0F3B8AB286D973F007CF5AB /* ATDemoOfferAdMode.m in Sources */,
 				286011852AB93A1900813B76 /* MaticooMediationURLSession.m in Sources */,
 				04CF3220280007900083B5AA /* ATHomeFootView.m in Sources */,
+				8F45A1052DA64013009B5BEE /* MATSplashAdapter.m in Sources */,
 				9BBD009C24863048009EAD66 /* SceneDelegate.m in Sources */,
 				9BBD00BE248630C8009EAD66 /* ATBannerViewController.m in Sources */,
 				9B9FEC2128925F3200B905ED /* ATNativeExpressViewController.m in Sources */,
